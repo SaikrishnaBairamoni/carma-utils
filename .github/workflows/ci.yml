@@ -28,7 +28,8 @@ jobs:
       run: |
         source "$INIT_ENV"
         source "$ROS_2_ENV"
-        ./src/${{ github.event.repository.name }}/docker/checkout.bash -r /opt/carma/
+        git clone -b develop --depth 1 git@github.com:usdot-fhwa-stol/carma-msgs.git src/CARMAMsgs
+        # ./src/${{ github.event.repository.name }}/docker/checkout.bash -r /opt/carma/
     - name: Build
       run: |
         source "$INIT_ENV"
