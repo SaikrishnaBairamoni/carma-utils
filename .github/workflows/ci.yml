@@ -25,7 +25,7 @@ jobs:
     - name: Move source code
       run: mv $GITHUB_WORKSPACE/src /opt/carma/
     - name: Checkout dependencies
-      run: |CARMAUtils
+      run: |
         source "$INIT_ENV"
         source "$ROS_2_ENV"
         git clone -b develop --depth 1 https://github.com/usdot-fhwa-stol/carma-msgs.git src/CARMAMsgs
